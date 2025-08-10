@@ -1,0 +1,74 @@
+{
+    "terminal.integrated.scrollback": 5000,
+    "editor.minimap.enabled": false,
+    "editor.suggest.preview": true,
+    "go.useLanguageServer": true,
+    "go.autocompleteUnimportedPackages": true,
+
+    "gopls": {
+        "ui.completion.usePlaceholders": true,
+        "staticcheck": false, // golangci-lint supersedes this
+        "analyses": {
+            "unusedparams": true,
+            "shadow": true,
+       },
+        "buildFlags": ["-tags=integration"]
+    },
+
+    "go.formatTool": "gofmt",
+    "go.lintOnSave": "file",
+    "go.lintTool": "golangci-lint",
+    "go.toolsManagement.autoUpdate": true,
+    "go.toolsEnvVars": {
+      "GOFLAGS": "-tags=integration"
+    },
+    "go.coverOnSave": true,
+    "go.coverageDecorator": {
+        "type": "gutter",
+        "coveredHighlightColor": "rgba(64,128,128,0.5)",
+        "uncoveredHighlightColor": "rgba(128,64,64,0.25)",
+        "coveredGutterStyle": "blockgreen",
+        "uncoveredGutterStyle": "blockred"
+    },
+    "go.coverOnSingleTest": true,
+    "[gotmpl]": {},
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false,
+        "go": true,
+        "groovy": true
+    },
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "git.confirmSync": false,
+    "go.alternateTools": {
+
+
+    },
+    "update.showReleaseNotes": false,
+    "editor.stickyScroll.enabled": false,
+    "scm.defaultViewMode": "tree",
+    "git.replaceTagsWhenPull": true,
+    "editor.renderWhitespace": "all",
+    "workbench.colorTheme": "Gruvbox Dark Soft",
+    "workbench.startupEditor": "none",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "go.lintFlags": [
+        "[\"run\", \"--out-format\",\"json\",\"--fast\"]"
+    ],
+    "makefile.configureOnOpen": false,
+    "docker.extension.enableComposeLanguageServer": false,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "chat.agent.maxRequests": 100,
+    "github.copilot.chat.codesearch.enabled": true,
+    "chat.tools.autoApprove": false,
+}
